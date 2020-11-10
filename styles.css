@@ -67,6 +67,12 @@ body {
 .button:hover {
     cursor: pointer;
 }
+
+.button:active {
+    background: #c2c2c2;
+}
+
+
 #zero {
     flex-basis: 50%;
 }
@@ -76,8 +82,16 @@ body {
     background: #f2ae65;
 }
 
+.operator:active,
+#equals:active {
+    background: #df9f5a;
+}
+
 .modifier {
     background: #e29b98;
+}
+.modifier:active {
+    background:  #d4928f;
 }
 .calc-screen {
     background: #85c1d4;
