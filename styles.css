@@ -10,7 +10,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center; 
-    background: linear-gradient(90deg, #9b887d94 30%, #9b887d94 100%), url(images/dm-background.png);
+    background: linear-gradient(90deg, #9b887d7e 30%, #9b887d7e 100%), url(images/dm-background.png);
 }
 
 .calc {
@@ -29,8 +29,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    font-size: 4em;
+    font-size: 3.8em;
     font-family: 'Open Sans';
+    padding-right: 10px;
 }
 .calc-body {
     height: 80%;
@@ -58,6 +59,9 @@ body {
     align-items: center;
 }
 
+.button:hover {
+    cursor: pointer;
+}
 #zero {
     flex-basis: 50%;
 }
