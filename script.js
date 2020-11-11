@@ -7,11 +7,15 @@ function subtract (a, b) {
 }
 
 function multiply (a, b) {
-    return a * b;
+    let solution = a * b;
+    return solution;
+    //need to code to truncate
 }
 
 function divide (a, b) {
-    return a / b;
+    let quotient = a / b;
+    return quotient;
+    //need code to truncate
 }
 
 function operate (num1, num2, operator) {
@@ -29,7 +33,7 @@ function operate (num1, num2, operator) {
             if (num2 == 0) {
                 return 'LoL'
             } else {
-            return multiply(num1, num2);
+            return divide(num1, num2);
             }
     }
 }
@@ -56,6 +60,8 @@ for (let button of numbers) {
 let operators = document.querySelectorAll('.operator');
 for (let button of operators) {
     button.addEventListener('click', () => {
+        //If the user is stringing together operations and there is already a value in num1,
+        //store the current value in num2, find the solution to the first operation, store it in num1 and display it
         if (num1) {
             num2 = +displayValue;
             displayValue = '';
@@ -99,5 +105,15 @@ negateBtn.addEventListener('click', () => {
     screen.textContent = displayValue;
 });
 
+//Disable the decimal button if there is already one on the display
+
+let decimalBtn = document.querySelector('#decimal');
+
+decimalBtn.addEventListener('click', () => {
+    if (displayValue.includes('.') == false){
+    displayValue += decimalBtn.textContent;
+    screen.textContent = displayValue;
+    }
+});
 
 
