@@ -18,6 +18,7 @@ function divide (a, b) {
     //need code to truncate
 }
 
+
 function operate (num1, num2, operator) {
     switch(operator) {
         case 'add':
@@ -27,13 +28,13 @@ function operate (num1, num2, operator) {
             return subtract(num1, num2);
             break;
         case 'multiply':
-            return multiply(num1, num2);
+            return parseFloat(multiply(num1, num2).toFixed(6));
             break;
         case 'divide':
             if (num2 == 0) {
                 return 'LoL'
             } else {
-            return divide(num1, num2);
+                return parseFloat(divide(num1, num2).toFixed(6));
             }
     }
 }
@@ -78,9 +79,11 @@ for (let button of operators) {
 
 let equalBtn = document.querySelector('#equals');
 equalBtn.addEventListener('click', () => {
+    if(num1) {
     num2 = +displayValue;
     let solution = operate(num1, num2, operator);
     screen.textContent = solution;
+    }
 });
 
 let clearBtn = document.querySelector('#clear');
